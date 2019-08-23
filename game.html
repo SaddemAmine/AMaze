@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/game.css">
+
+
+</head>
+<body>
+    
+    <div class="toggle-box">
+        <input type="checkbox" name="checkbox1" id="toggle-box-checkbox" />
+        <label for="toggle-box-checkbox" class="toggle-box-label-left"></label>
+        <label for="toggle-box-checkbox" class="toggle-box-label"></label>
+    </div>
+    <style>
+    body {
+        padding: 8px;
+        font-family: Helvetica;
+    }
+
+    .player {
+        border: 1px #000 solid;
+        border-radius: 100px;
+        position: absolute;
+    }
+
+    #buttons {
+        touch-action: manipulation;
+        padding: 16px;
+    }
+
+    .button {
+        width: 60px;
+        height: 60px
+    }
+    </style>
+    <title>AMaze</title>
+    <B> Maze Real-Time with Firebase Demo</B><BR>
+    Use buttons (or arrow-keys) to move to the bottom-right.
+    <BR><BR>
+        <div style='position:absolute' id=players>
+        </div>
+        <table>
+        <TR>
+            <TD>
+            <canvas id="canvas" style="border:1px solid #000000;">
+            </canvas>
+            <div id=buttons>
+                <center>
+                <table>
+                    <TR>
+                    <TD></td>
+                    <TD>
+                        <center> <input type=button class=button value="Up" onclick="goUp()"></center>
+                    </td>
+                    <TD>
+                    </td>
+                    </tr>
+                    <TR>
+                    <TD>
+                        <input type=button class=button value="Left" onclick="goLeft()"></td>
+                    <TD>
+                        <input type=button class=button value="Down" onclick="goDown()">
+                    </td>
+                    <TD>
+                        <input type=button class=button value="Right" onclick="goRight()">
+                    </td>
+                    </tr>
+                </table>
+                </center>
+            </div>
+            </td>
+        </tr>
+        </table>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+        <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+        <script>
+            var DBNAME='game';
+            var GAMENAME='maze1566468000';
+        </script>
+        <script src="scripts/maze.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/darkmode.js"></script>
+    </body>
+</html>
+
+
